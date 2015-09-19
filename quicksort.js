@@ -24,6 +24,6 @@
   }
 
   // 测试
-  console.log(quicksort([1,5,2,6,786,45,32,23,5,3,2,7,6,7]));
+  console.log(quicksort());
 
 })();
