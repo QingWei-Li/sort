@@ -7,11 +7,11 @@
  * 
  * @example
  * 
- * var arr = [6,4,2,8,1,2].sleepsort();
+ * var arr = [6,4,2,8,1,2].sleepSort();
  * console.log(arr); // [1,2,2,4,6,8]
  * 
  */
-Array.prototype.sleepsort = function () {
+Array.prototype.sleepSort = function () {
   var _arr = [];
   this.forEach(function (number) {
     setTimeout(function () {
