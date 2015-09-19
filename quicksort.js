@@ -13,7 +13,7 @@
     if (arr.length < 2) {
       return arr;
     }
-    for (var i = 1 i < arr.length i++) {
+    for (var i = 1; i < arr.length; i++) {
       if (arr[i] < flag) {
         leftArr.push(arr[i]);
       } else {
