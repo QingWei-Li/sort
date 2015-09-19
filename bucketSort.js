@@ -16,25 +16,27 @@
  * {@link https://zh.wikipedia.org/wiki/%E6%A1%B6%E6%8E%92%E5%BA%8F|桶排序-Wiki}
  */
 Array.prototype.bucketSort = function() {
-  var buckets = [], // 待排序的桶
-      output = [], // 排序过的数组
-      arr = this, // 原数组
-      i = arr.length // 缓存数组的长度
+  var buckets = []; // 待排序的桶
+  var output = []; // 排序过的数组
+  var arr = this; // 原数组
+  var i = arr.length; // 缓存数组的长度
 
   // 遍历原数组把元素当作桶的编号，然后桶里放数字 1 表示该元素出现了一次
   // 如果指定下标的桶是存在的，就把桶内的数字加 1 表示又出现了一次
-  while( i-- ) 
-    buckets[ arr[ i ] ] = ( buckets[ arr[ i ] ] || 1 ) + 1
+  while(i--) {
+    buckets[arr[i]] = (buckets[arr[i]] || 1 ) + 1;
+  }
 
   // 现在要把排好位置的桶里的数字倒出来
   // 遍历桶
-  for ( index in buckets ) {
+  for (index in buckets) {
     // 遍历桶里的数字，是几就表示当前桶所代表的数字出现了几次
-    i = buckets[index] - 1
-    while ( i-- )
+    i = buckets[index] - 1;
+    while ( i-- ) {
       // 加号是把字符串转数字
-      output.push(+index)
+      output.push(+index);
+    }
   }
 
-  return output
+  return output;
 }
